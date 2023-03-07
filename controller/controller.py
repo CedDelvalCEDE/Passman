@@ -110,6 +110,9 @@ class MainApp:
                 error = user.vault.change_item_content('password', new_content, None, from_where)
             case '4':
                 self.main_menu(user)
+            case _:
+                self.view.print_error_msg("You are not in case !!!")
+                self.main_menu(user)
         if not error:
             self.view.print_error_msg("the change does not work. ")
 
